@@ -1,14 +1,9 @@
 import os
-#from fastapi import FastAPI
 from pydantic import BaseModel
-#from sklearn.feature_extraction.text import TfidfVectorizer
-#from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
-#from nltk.tokenize import word_tokenize
 import pandas as pd
 from sentence_transformers import CrossEncoder, util
 from huggingface_hub import InferenceClient
-#import logging
 import numpy as np
 import re
 import psycopg2
