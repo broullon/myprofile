@@ -1,0 +1,9 @@
+backend/venv/
+backend/__pycache__/
+backend/local_test.py
+*.pyc
+.git/
+.DS_Store
+README.md
+approuter/node_modules
+approuter/resources/nome_modules
