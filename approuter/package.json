@@ -1,0 +1,14 @@
+{
+  "name": "evaristo-profile-chatbot-ui",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@sap/approuter": "^20"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^4"
+  },
+  "scripts": {
+    "start": "ui5 serve --open index.html"
+  }
+}

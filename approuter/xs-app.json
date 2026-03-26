@@ -1,0 +1,19 @@
+{
+  "welcomeFile": "/index.html",
+  "authenticationMethod": "route",
+  "routes": [
+    {
+      "source": "^/chat/(.*)$",
+      "target": "/chat/$1",
+      "destination": "fastapi-destination",
+      "authenticationType": "none"
+    },
+    {
+      "source": "^/(.*)$",
+      "localDir": "resources/webapp",
+      "target": "$1",
+      "cacheControl": "no-cache, no-store, must-revalidate",
+      "authenticationType": "none"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+<mvc:View
+  controllerName="evaristo.profile.chatbot.controller.Main"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  displayBlock="true">
+
+  <App>
+    <pages>
+
+      <Page title="My Profile ChatBot">
+        <content>
+          <VBox class="sapUiMediumMargin" fitContainer="true" height="90%">
+
+            <Title text="Ask something about Evaristo's profile" level="H3" />
+            <Text text="Type your question below and see the chatbot answers." class="sapUiSmallMarginBottom" />
+
+            <List
+              id="chatMessages"
+              items="{/messages}"
+              class="sapUiSmallMarginTop sapUiSmallMarginBottom"
+              growingScrollToLoad="true"
+              width="100%">
+
+              <CustomListItem>
+                <VBox class="sapUiSmallMarginBottom">
+                  <HBox
+                    justifyContent="Start"
+                    width="100%">
+
+                    <Panel
+                      width="100%"
+                      expandable="false">
+
+                      <headerToolbar>
+                        <Toolbar>
+                          <Title 
+                            text="{
+                                    path: 'sender',
+                                    formatter: '.formatSenderTitle'
+                                  }" 
+                            level="H5" />
+                        </Toolbar>
+                      </headerToolbar>
+
+                      <content>
+                        <Text text="{text}" wrapping="true" />
+                      </content>
+                    </Panel>
+                  </HBox>
+                </VBox>
+              </CustomListItem>
+            </List>
+          </VBox>
+        </content>
+        <footer>
+          <Toolbar>
+            <Input
+              id="questionInput"
+              value="{/currentQuestion}"
+              placeholder="Write your question here..."
+              width="100%"
+              submit=".onSendQuestion" />
+            <Button
+              text="Send"
+              type="Emphasized"
+              press=".onSendQuestion" />
+          </Toolbar>
+        </footer>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>

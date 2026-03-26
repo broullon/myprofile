@@ -1,0 +1,11 @@
+specVersion: "4.0"
+metadata:
+  name: evaristo.profile.chatbot
+type: application
+resources:
+  configuration:
+    paths:
+      webapp: resources/webapp
+server:
+  settings:
+    httpPort: 8080
