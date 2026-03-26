@@ -1,13 +1,10 @@
 fastapi
 pandas
-nltk
 numpy
 scikit-learn
 pydantic
 uvicorn
-openpyxl
 sentence-transformers
-sqlalchemy
 psycopg2
 python-dotenv
 requests

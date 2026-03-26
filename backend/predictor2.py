@@ -8,7 +8,6 @@ import numpy as np
 import re
 import psycopg2
 from dotenv import load_dotenv
-import requests
 from docx import Document
 
 # -------------------------------
