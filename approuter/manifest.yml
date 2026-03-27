@@ -1,0 +1,19 @@
+applications:
+  - name: evaristo-profile-chatbot-frontend
+    path: .
+    memory: 512M
+    disk_quota: 512MB
+    instances: 1
+    buildpacks:
+      - nodejs_buildpack
+    command: command: npm start
+    env:
+      NODE_ENV: production
+    destinations: >
+        [
+          {
+            "name": "backend",
+            "url": "https://evaristo-profile-chatbot-backend.cfapps.eu10-005.hana.ondemand.com",
+            "forwardAuthToken": false
+          }
+        ]

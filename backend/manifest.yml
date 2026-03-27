@@ -1,0 +1,11 @@
+applications:
+  - name: evaristo-profile-chatbot-backend
+    path: .
+    memory: 1024M
+    disk_quota: 2048MB
+    instances: 1
+    buildpacks:
+      - python_buildpack
+    command: uvicorn main:app --host 0.0.0.0 --port $PORT
+    routes:
+      - route: evaristo-profile-chatbot-backend.cfapps.eu10-005.hana.ondemand.com

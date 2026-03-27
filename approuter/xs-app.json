@@ -5,8 +5,9 @@
     {
       "source": "^/chat/(.*)$",
       "target": "/chat/$1",
-      "destination": "fastapi-destination",
-      "authenticationType": "none"
+      "destination": "backend",
+      "authenticationType": "none",
+      "csrfProtection": false
     },
     {
       "source": "^/(.*)$",
